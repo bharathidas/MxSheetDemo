@@ -1,0 +1,88 @@
+@import '../../../theme/web/custom-variables';
+
+// MxSheetDemo pages (Sheet_Showcase and the use-case pages).
+// Self-contained: the module brings its own page header and panel styles, so the pages look the same in any app.
+// Selectors match the WidgetLab theme on purpose.
+// ---- page tokens and width
+.wl-cal-page {
+    --wl-line: rgba(11, 9, 6, 0.09);
+    --wl-line-soft: rgba(11, 9, 6, 0.055);
+    --wl-ink: #1c1915;
+    --wl-muted: #6f6a61;
+    --wl-faint: #736d64;
+    --wl-surface: #fff;
+    --wl-sunken: #faf8f6;
+    --wl-radius: 16px;
+    --wl-shadow: 0 1px 2px rgba(11, 9, 6, 0.04), 0 8px 24px rgba(11, 9, 6, 0.04);
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4px 0 48px;
+    color: var(--wl-ink);
+}
+.region-content .mx-placeholder > .wl-cal-page { width: 100%; max-width: 1280px; }
+.region-content .mx-placeholder > .wl-sheet-page { max-width: 1480px; }
+
+// ---- page header
+.wl-pagehead { margin-bottom: 24px; }
+.wl-eyebrow {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(242, 101, 34, 0.1);
+    font: 700 10.5px/1.4 var(--font-family-base);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a8390f;
+    margin-bottom: 10px;
+}
+.wl-pagehead > .wl-eyebrow { display: table; }
+.mx-page .wl-pagetitle {
+    display: block;
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 29px;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    &::before { content: none; }
+}
+.wl-pagesub { display: block; max-width: 72ch; font-size: 14.5px; line-height: 1.6; color: var(--wl-muted); }
+
+// ---- panels
+.wl-panel {
+    background: var(--wl-surface);
+    border: 1px solid var(--wl-line);
+    border-radius: var(--wl-radius);
+    padding: 22px 24px 24px;
+    box-shadow: var(--wl-shadow);
+}
+.wl-panel-head {
+    margin: -2px 0 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--wl-line-soft);
+}
+.mx-page .wl-panel-title {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    &::before { content: none; }
+}
+.wl-panel-sub { display: block; margin-top: 5px; font-size: 12.5px; line-height: 1.5; color: var(--wl-muted); }
+.wl-note {
+    display: block;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--wl-line-soft);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--wl-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wl-cal-page * { transition: none !important; }
+}
+
+/* widget-features (generated) */
+.mxsheet-cs-bulk { background: #ede7f6; }
+/* end widget-features */
